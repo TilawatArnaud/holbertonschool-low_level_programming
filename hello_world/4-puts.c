@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 /**
- * main - Entry
+ * main - Entry point
  *
- * return: 0 no error
+ * Return: Always 0 (Success)
  */
 
 int main(void)
-	/*this starts the fonction main*/
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	/*this fonction to puts text*/
+		puts("\"Programming is like building a multilingual puzzle");
 			return (0);
-			/* this return 0*/
 }
