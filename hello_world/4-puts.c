@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - Entry
  *
  * return: 0 no error
  */
+
 int main(void)
 	/*this starts the fonction main*/
 {
