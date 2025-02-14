@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main this is my first C code using puts
+ * main - Entry
  *
  * return: 0 no error
  */
