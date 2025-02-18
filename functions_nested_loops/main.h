@@ -1,7 +1,5 @@
-#include <stdio.h>
-#ifndef MYHEADER_H
-#define MYHEADER_H
-
+#ifndef MAIN_H
+#define MAIN_H
 /**
  * File: main.h
  * Auth: Tilawat Arnaud
@@ -9,3 +7,5 @@
  */
 
 int _putchar(char c);
+
+#endif /* MAIN_H */

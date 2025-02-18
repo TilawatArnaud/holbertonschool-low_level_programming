@@ -1,4 +1,11 @@
-#include <stdio.h>
+#include "main.h"
+#include <unistd.h>
+
+int _putchar (char c)
+{
+	return write(1, &c, 1);
+}
+
 /**
  * main - Entry point
  *
@@ -6,14 +13,14 @@
  */
 int main(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	char *str = "_putchar";
+
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+	}
+	_putchar('\n');
+
 	return (0);
 }
