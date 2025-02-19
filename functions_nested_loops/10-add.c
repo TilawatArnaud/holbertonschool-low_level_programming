@@ -14,7 +14,9 @@ int add(int a, int b)
 	int c;
 
 	c = a + b;
-	_putchar(c + '0');
+	if (c >= 10)
+		_putchar(c / 10 + '0');
+	_putchar(c % 10 + '0');
 	_putchar('\n');
 	return (c);
 }
