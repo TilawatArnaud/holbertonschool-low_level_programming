@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - print a diagonal line on the terminal
- * @n: the number of \
+ * @n: the number of '\' should be printed
  */
 
 void print_diagonal(int n)
@@ -17,10 +17,12 @@ void print_diagonal(int n)
 			{
 				_putchar(' ');
 			}
-		_putchar('\\');
-		_putchar('\n');
+			_putchar('\\');
+			_putchar('\n');
 		}
 	}
 	else
+	{
 		_putchar('\n');
+	}
 }
