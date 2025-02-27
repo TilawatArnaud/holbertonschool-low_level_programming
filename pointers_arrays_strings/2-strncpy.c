@@ -2,8 +2,8 @@
 
 /**
  * _strncpy - Copies the string pointed to by src, including the
- *           terminating null byte (\0), to the buffer pointed to by dest.
- * 			 limited by n bytes
+ *			terminating null byte (\0), to the buffer pointed to by dest.
+ *			limited by n bytes
  * @dest: Destination buffer.
  * @src: Source string.
  * @n: bytes limit
