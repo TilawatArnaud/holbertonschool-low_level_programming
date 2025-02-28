@@ -12,11 +12,12 @@ char *leet(char *s)
 
 	while(s[i] != '\0')
 	{
-	i++;
 	if(s[i] == min[i] || s[i] == maj[i])
 		{
-			s[i] = num[i];
+			s[i] = num[i] + '0';
+			
 		}
+		i++;
 	}
 	return (s);
 }
