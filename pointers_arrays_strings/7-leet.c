@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * 
+ * leet - convert string to leet style
+ * @s: string
+ * return: string in leet
  */
 
 char *leet(char *s)
