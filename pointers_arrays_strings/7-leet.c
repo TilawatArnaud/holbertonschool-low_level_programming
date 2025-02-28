@@ -11,11 +11,8 @@ char *leet(char *s)
 	char maj[] = {'A', 'E', 'O', 'T', 'L'};
 	char num[] = {4, 3, 0, 7, 1};
 
-	while(i <= s)
+	while(s[i] != '\0')
 	{
-	min[i];
-	maj[i];
-	num[i];
 	i++;
 	if(*s == min[i] || *s == maj[i])
 		{
