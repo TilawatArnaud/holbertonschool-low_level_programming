@@ -2,7 +2,8 @@
 /**
  * leet - convert string to leet style
  * @s: string
- * return: string in leet
+ * 
+ * Return: string in leet
  */
 
 char *leet(char *s)
