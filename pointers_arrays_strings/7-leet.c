@@ -5,17 +5,20 @@
 
 char *leet(char *s)
 {
-	int i = 0;/*parcoureur de tableau */
+	int i;/*parcoureur de tableau */
+	int j;
 	char min[] = {'a','e', 'o', 't', 'l'};
 	char maj[] = {'A', 'E', 'O', 'T', 'L'};
 	char num[] = {4, 3, 0, 7, 1};
 
 	while(s[i] != '\0')
 	{
-	if(s[i] == min[i] || s[i] == maj[i])
+		for (j = 1; s[j] != '\0'; j++)
 		{
-			s[i] = num[i] + '0';
-			
+			if(s[i] == min[j] || s[i] == maj[j])
+			{
+				s[i] = num[j] + '0';
+			}
 		}
 		i++;
 	}
