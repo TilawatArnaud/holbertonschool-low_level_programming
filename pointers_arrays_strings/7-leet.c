@@ -2,7 +2,7 @@
 /**
  * leet - convert string to leet style
  * @s: string
- * 
+ *
  * Return: string in leet
  */
 
