@@ -10,25 +10,27 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-    int i, j;
+    if (*needle == '\0') // If needle is empty, return the whole haystack.
+        return haystack;
 
-    if (*needle == '\0')
-        return (haystack);
-
-    while (*haystack)
+    while (*haystack) // Traverse through haystack.
     {
-        i = 0;
-        
-        while (haystack[i] == needle[i] && needle[i] != '\0')
+        char *h = haystack; // Pointer to current position in haystack.
+        char *n = needle;   // Pointer to current position in needle.
+
+        // Compare the substring starting from current positions of haystack and needle.
+        while (*h && *n && *h == *n)
         {
-            i++;
+            h++;
+            n++;
         }
 
-        if (needle[i] == '\0')
-            return (haystack);
+        // If we've reached the end of needle, we've found a match.
+        if (*n == '\0')
+            return haystack;
 
-        haystack++;
+        haystack++; // Move to the next character in haystack.
     }
 
-    return (NULL);
+    return NULL; // Return NULL if no match is found.
 }

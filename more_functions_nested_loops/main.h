@@ -4,7 +4,7 @@
 /**
  * file: main.h
  * Auth: TILAWAT Arnaud
- * Desc: All functions used for project 4
+ * Desc: All functions used for project pointers
  */
 
 int _isupper(int c);
