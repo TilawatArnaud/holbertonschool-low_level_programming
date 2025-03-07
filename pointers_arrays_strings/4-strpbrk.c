@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h> /* Ensure NULL is recognized */
 
 /**
  * _strpbrk - Searches a string for any of a set of bytes
