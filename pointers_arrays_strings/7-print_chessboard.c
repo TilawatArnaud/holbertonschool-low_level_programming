@@ -1,19 +1,23 @@
 #include "main.h"
-
 /**
- * print_chessboard - Prints an 8x8 chessboard
- * @a: Pointer to an 8x8 array of characters
+ * print_chessboard - print chessboard
+ *@a: pointer to print chessboard
  */
 void print_chessboard(char (*a)[8])
 {
-    int i, j;
+    int i;
+    int j;
 
-    for (i = 0; i < 8; i++)
+    i = j = 0;
+    while (i < 8)
     {
-        for (j = 0; j < 8; j++)
+        j = 0;
+        while (j < 8)
         {
             _putchar(a[i][j]);
+            j++;
         }
         _putchar('\n');
+        i++;
     }
 }
