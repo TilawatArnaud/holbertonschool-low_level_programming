@@ -4,7 +4,7 @@
 
 /**
  * free_dog - free dog
- * @d: pointer to structure
+ * @d: pointer to struct
  */
 
 void free_dog(dog_t *d)
