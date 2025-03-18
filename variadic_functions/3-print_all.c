@@ -14,27 +14,21 @@ void print_all(const char * const format, ...)
 	char c;
 	int num;
 	float fl;
+	int first = 1;
 
 	va_start(args, format);
-	while (format && format[i] != '\0')
+
+	while (format && format[i])
 	{
-		if (i > 0)
+		if (!first && (format[i] == 'c' || format[i] == 'i'
+		 || format[i] == 'f' || format[i] == 's'))
 			printf(", ");
 		if (format[i] == 'c')
-		{
-			c = va_arg(args, int);
-			printf("%c", c);
-		}
+			printf("%c", va_arg(args, int));
 		else if (format[i] == 'i')
-		{
-			num = va_arg(args, int);
-			printf("%d", num);
-		}
+			printf("%d", va_arg(args, int));
 		else if (format[i] == 'f')
-		{
-			fl = va_arg(args, double);
-			printf("%f", fl);
-		}
+			printf("%f", va_arg(args, double));
 		else if (format[i] == 's')
 		{
 			str = va_arg(args, char *);
@@ -43,8 +37,10 @@ void print_all(const char * const format, ...)
 			else
 				printf("%s", str);
 		}
+		first = 0;
 		i++;
 	}
+
 	printf("\n");
 	va_end(args);
 }
