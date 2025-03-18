@@ -43,7 +43,6 @@ void print_all(const char * const format, ...)
 			else
 				printf("%s", str);
 		}
-
 		i++;
 	}
 	printf("\n");
