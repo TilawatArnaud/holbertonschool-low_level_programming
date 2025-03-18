@@ -11,9 +11,6 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char *str;
-	char c;
-	int num;
-	float fl;
 	int first = 1;
 
 	va_start(args, format);
