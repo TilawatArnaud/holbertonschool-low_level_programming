@@ -1,7 +1,8 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>  // for isdigit
+#include <ctype.h>
+#include <string.h>
 
 /**
  * main - Performs simple operations
