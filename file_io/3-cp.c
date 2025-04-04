@@ -54,20 +54,19 @@ int main(int ac, char **av)
 	if (fd_to == -1)
 	{
 		close_fd(fd_from);
-		print_error(99, "Error: Can't write to file %s\n", av[2]);
+		print_error(99, "Error: Can't write to %s\n", av[2]);
 	}
 
 	while ((r_bytes = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		w_bytes = write(fd_to, buffer, r_bytes);
-		if (w_bytes == -1)
+		if (w_bytes != r_bytes)
 		{
 			close_fd(fd_from);
 			close_fd(fd_to);
-			print_error(99, "Error: Can't write to file %s\n", av[2]);
+			print_error(99, "Error: Can't write to %s\n", av[2]);
 		}
 	}
-
 	if (r_bytes == -1)
 	{
 		close_fd(fd_from);
@@ -75,11 +74,7 @@ int main(int ac, char **av)
 		print_error(98, "Error: Can't read from file %s\n", av[1]);
 	}
 
-	if (close(fd_from) == -1)
-		print_error(100, "Error: Can't close file descriptor %d\n", av[1]);
-
-	if (close(fd_to) == -1)
-		print_error(100, "Error: Can't close file descriptor %d\n", av[2]);
-
+	close_fd(fd_from);
+	close_fd(fd_to);
 	return (0);
 }
