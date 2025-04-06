@@ -1,7 +1,3 @@
-/*
- * File: 3-cp.c
- * Auth: Brennan D Baraban
- */
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
